@@ -37,9 +37,13 @@ To get started with development locally, follow these steps:
     npm install
     ```
 
-4.  Create a `.env` file in the `client` directory with the following variables:
+4.  Create a `.env` file in the `client` directory. You can copy the example file:
+    ```sh
+    cp .env.example .env
+    ```
+    Then update the values in `.env` with your actual configuration:
     ```env
-    VITE_API_URL=http://localhost:30036/api
+    VITE_API_URL=https://gxqp00jho1.execute-api.ap-south-1.amazonaws.com/default
     VITE_ADMIN_EMAIL=admin@gmail.com
     VITE_ADMIN_PASSWORD=Dhana@123
     ```
@@ -47,6 +51,29 @@ To get started with development locally, follow these steps:
 5.  Start the development server:
     ```sh
     npm run dev
+    ```
+
+### Server Setup
+
+1.  Navigate to the server directory:
+    ```sh
+    cd server
+    ```
+
+2.  Install dependencies:
+    ```sh
+    npm install
+    ```
+
+3.  Create a `.env` file in the `server` directory. You can copy the example file:
+    ```sh
+    cp .env.example .env
+    ```
+    Then update the values in `.env` with your actual AWS and Cloudflare R2 credentials.
+
+4.  Start the server:
+    ```sh
+    node server.js
     ```
 
 ## Project Structure
