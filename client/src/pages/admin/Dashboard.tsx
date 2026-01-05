@@ -11,11 +11,7 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
-  PieChart,
-  Pie,
-  Cell,
 } from 'recharts';
 
 interface StatCardProps {
@@ -53,7 +49,7 @@ const StatCard: React.FC<StatCardProps> = ({ title, value, icon: Icon, descripti
   );
 };
 
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884d8'];
+
 
 const Dashboard: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -76,7 +72,7 @@ const Dashboard: React.FC = () => {
       setBanners(bans);
       setCategories(cats);
     } catch (error) {
-      console.error('Error loading dashboard data:', error);
+      // Error handled silently or could be toasted
     } finally {
       setLoading(false);
     }

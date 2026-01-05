@@ -8,7 +8,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Combobox } from '@/components/ui/combobox';
-import { Product, ProductSpec } from '@/types';
+import { Product } from '@/types';
 import { Plus, Trash2, Save, X, ArrowLeft } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
@@ -144,9 +144,7 @@ const ProductForm: React.FC = () => {
     setFormData((prev) => ({ ...prev, imageUrls: newUrls }));
   };
 
-  const addImageUrl = () => {
-    setFormData((prev) => ({ ...prev, imageUrls: [...prev.imageUrls, ''] }));
-  };
+
 
   const removeImageUrl = (index: number) => {
     if (formData.imageUrls.length > 1) {
@@ -234,7 +232,6 @@ const ProductForm: React.FC = () => {
       });
       navigate('/admin/products');
     } catch (error: any) {
-      console.error('Save error:', error);
       toast({
         title: 'Error saving product',
         description: error.message || 'Unknown error occurred',

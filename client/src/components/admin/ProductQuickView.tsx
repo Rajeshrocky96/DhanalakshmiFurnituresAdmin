@@ -6,9 +6,9 @@ import {
     DialogTitle,
     DialogDescription,
 } from '@/components/ui/dialog';
-import { Product, Category, Subcategory } from '@/types';
+import { Product } from '@/types';
 import { Badge } from '@/components/ui/badge';
-import { ScrollArea } from '@/components/ui/scroll-area';
+
 import { Check, Package, Tag, Layers } from 'lucide-react';
 
 interface ProductQuickViewProps {

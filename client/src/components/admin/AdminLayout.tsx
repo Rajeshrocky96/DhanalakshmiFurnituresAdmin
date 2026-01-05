@@ -8,7 +8,7 @@ import {
   FolderTree,
   Layers,
   Grid3X3,
-  MessageSquare,
+
   LogOut,
   Menu,
   X,
